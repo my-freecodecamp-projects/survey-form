@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- This is a survey form created as a project for freeCodeCamp.  I've made it
+to be a survey for a new client to fill out at a first visit with an investment
+firm. -->
+<head>
+<title>Investment Survey</title>
+    <link href="survey-form003.css" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+ 
+<body>
+        <!-- when this gets put back into codepen, be sure to add the
+    freeCodeCamp test link -->
+
+    <div id="background">  <!-- this div will define the background -->
+        <aside id="aside1"></aside>
+        <aside id="aside2"></aside>
+        <article id="main-wrapper"> <!-- this is the main wrapper for the entire
+        survey form -->
+        <h1 id="title">Fricker Solutions<br/>
+            Investment Survey<h1>
+        <p id="description">Please answer the questions below to 
+            help us determine which of our investment advisors would be 
+            the best fit for you.</p>
+  
+ <!-- start of form -->
+        <form id="survey-form">
+  
+  <!-- basic information -->
+        <fieldset class="basic-information">
+            <legend>Basic Information</legend>    
+                <label for="name" id="name-label">Name: </label>
+                <input type="text" id="name" name="username" placeholder="First Last" pattern="[A-Za-z0-9]+ {2, 40}" required>
+                <label for="email" id="email-label">Email: </label>
+                <input type="email" id="email" name="email" placeholder="Best email to reach you" required>  
+                <label for="number" id="number-label">Age: </label>
+                <input type="number" id="number" name="age" placeholder="Age" pattern="[0-9]" min="12" max="120"size="4"> 
+        </fieldset> <!-- end basic information -->
+
+    <!-- investment goal -->
+        <fieldset class="investment-goal">
+            <legend>Primary Investment Goal</legend>
+            <div class="pointer-cursor">
+                <div class="pair">
+                <input type="radio" id="down-payment" name="goal" value="goal1">
+                <label for="down-payment" class="point">Down Payment</label> 
+                </div>
+                <div class="pair">
+                <input type="radio" id="college" name="goal" value="goal2">
+                <label for="college" class="point">College</label> 
+                </div>
+                <div class="pair">
+                <input type="radio" id="retirement" name="goal" value="goal3">
+                <label for="retirement">Retirement</label>
+                </div>
+            </div>
+        </fieldset>
+
+  <!-- investment style -->
+        <fieldset class="investment-style">
+            <legend>Investment Style</legend>
+            <label for="dropdown" id="inv-style-label">How would you describe your investment style: </label>
+            <select id="dropdown" name="inv-style" class="pointer-cursor">
+                <option value="select" disabled selected>Select</option>
+                <option value="inv-style-1">Very Conservative</option>
+                <option value="inv-style-2">Conservative</option>
+                <option value="inv-style-3">Income focus</option>
+                <option value="inv-style-4">Moderate/Balanced</option>
+                <option value="inv-style-5">Growth</option>
+                <option value="inv-style-6">Agressive Growth</option>
+            </select>
+        </fieldset> <!-- end investment style -->
+  
+  <!-- investable assets -->
+        <fieldset class="investable-assets">
+            <legend>Investable Assets</legend>
+            <label for="assets" id="asset-question">What are your investable assets? 
+                (Not including real estate and retirement funds with your employer.)  </label>
+            <select id="assets" name="assets" class="pointer-cursor">
+                <option value="select" disabled selected>Select</option>
+                <option value="5k">Under $5,000</option>
+                <option value="20k">Under $20,000</option>
+                <option value="100k">Under $100,000</option>
+                <option value="500k">Under $500,000</option>
+                <option value="1M">Under $1,000,000</option>
+                <option value="5M">Under $5,000,000</option>
+                <option value="more">More than $5,000,000</option>
+            </select>
+        </fieldset> <!-- end investable assets -->
+
+  <!-- investment experience -->
+        <fieldset class="investment-experience">
+            <legend>Investment Experience</legend>
+            <p id="experience-question">Which of the following types of investments do you have experience with? (Check all that apply)</p>
+            <div class="pointer-cursor">
+            <div class="pair">
+                <input type="checkbox" id="savings" name="savings" value="savings">
+                <label for="savings"> Savings accounts</label></div>
+            <div class="pair">
+                <input type="checkbox" id="cds" name="cds" value="cds">
+                <label for="cds"> CDs</label></div>
+            <div class="pair">
+                <input type="checkbox" id="mutual-funds" name="mutual-funds" value="mutual-funds">
+                <label for="mutual-funds"> Mutual Funds</label></div>
+            <div class="pair">
+                <input type="checkbox" id="stocks" name="stocks" value="stocks">
+                <label for="stocks"> Individual Stocks</label></div>
+            <div class="pair">
+                <input type="checkbox" id="futures" name="futures" value="futures">
+                <label for="futures"> Futures or Commodities</label></div>
+            <div class="pair">
+                <input type="checkbox" id="options" name="options" value="options">
+                <label for="options"> Options</label></div>
+            <div class="pair">
+                <input type="checkbox" id="real" name="real" value="real">
+                <label for="real"> Real Estate</label></div>
+            <div class="pair">
+                <input type="checkbox" id="other" name="other" value="other">
+                <label for="other"> Other</label></div>
+            </div>
+        </fieldset> <!-- end investment experience -->
+
+
+    <!-- additional comments -->
+        <fieldset class="comments">
+        <legend>Additional Comments</legend>
+            <label for="textarea"></label>
+            <textarea id="textarea" name="message" placeholder="Additional comments here"></textarea>
+        </fieldset>
+    <!-- end additional comments -->
+  
+    <!-- submit button -->
+        <div id="submit-button">
+            <input type="submit" id="submit"> <!-- end submit button -->
+        <div>
+</form> <!-- end form -->
+</article>
+
+</div> <!-- end of background div -->
+</body>
+</html>

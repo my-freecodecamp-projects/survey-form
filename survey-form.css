@@ -1,0 +1,151 @@
+html {
+    font-family: Georgia, serif;
+    font-size: 12pt;
+    color: black;
+}
+
+#background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-image:url(https://images.barrons.com/im-86892);
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin: 0;
+    width: 100%;
+}
+
+#main-wrapper {
+    border: 3px solid black;
+    border-radius: 2vw;
+    background: rgb(255,255,255,0.9);
+    box-shadow:2px 4px 8px 1px #232424;
+    margin: 4vw 9vw;
+}
+
+#title {
+    font-size: 2rem;
+    text-align: center;
+    padding-top: 1%;
+}
+  
+#description {
+    margin: 8%;
+}
+
+fieldset {
+    margin: 4%;
+    border: none;
+}
+
+legend {
+    color: rgb(16, 67, 117);
+    font-size: 1.7rem;
+}
+
+.basic-information {
+    display: flex;
+    flex-direction: column;
+}
+
+.basic-information input {
+    height: 1.6rem;
+    font-size: 1.4rem;
+}
+
+#name, #email {
+    width: 23ch;
+    overflow: hidden;
+}
+
+.investment-goal {
+    display: flex;
+    flex-direction: column;
+}
+
+.investment-goal .pair {
+    display: flex;
+    flex-direction: row;
+}
+
+.pointer-cursor input, .pointer-cursor label{
+    cursor: pointer;
+}
+
+.investment-experience {
+    display: flex;
+    flex-direction: column;
+}
+#experience-question,
+.investment-experience .pointer-cursor,
+.comments,
+#submit {
+    position: relative;
+    top: -1rem;
+}
+
+#dropdown, #assets {
+    font-size: 1rem;
+}
+
+#textarea {
+    width: 32ch;
+    font-size: 1rem;
+}
+
+#submit-button {
+    display: flex;
+    justify-content: center;
+}
+
+input[type=submit]{
+    appearance: none !important;
+    font: inherit;
+    font-size: 1.7rem;
+    font-weight: bold;
+    align-content: center;
+    background-color: rgb(16, 67, 117);
+    color: white;
+    border-radius: 5px;
+    border: 1px solid black;
+    padding: 10px;
+    cursor: pointer;
+    box-shadow: 2px 4px 8px 1px #232424;
+}
+
+@media only screen and (min-width: 680px) {
+
+    #main-wrapper {
+        margin: 4vw 12vw;
+    }
+
+    #name, #email {
+        width: 30ch;
+    }
+
+    #title {
+        color: blue;
+    }
+}
+
+@media only screen and (min-width: 800px) {
+
+   #main-wrapper {
+       margin: 4vw 20vw;
+   }
+   
+    #title {
+        color: red;
+    }
+}
+
+@media only screen and (min-width: 1050px) {
+    #main-wrapper {
+        width: 650px;
+        margin: auto;
+    }
+
+    #title {
+        color: purple;
+    }
+}
